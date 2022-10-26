@@ -10,6 +10,7 @@ export class HomePageComponent implements OnInit {
   itemCollections = ['COLLECTIONS', 'KLASSIK', 'COLLABORATIONS', 'DESIGN CLOTHING', 'NEAVEN', 'SUPERSPORT'];
   itemClothings = ['CLOTHING', 'VIEW ALL', 'JACKETS', 'JEANS', 'OUTERWEAR', 'SHIRTING', 'SHORTS', 'SWEATSHIRT', 'TROUSERS', 'T-SHIRTS', 'SHIRTS', 'WAISTCOAT'];
   itemAccessories = ['ACCESSORIES', 'BAGS', 'BEANIES', 'HATS', 'SOCKS'];
+  _showNavBar: boolean = false;
 
   constructor(
     private router: Router
@@ -18,7 +19,13 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {}
 
   viewDetail(title: string) {
-    this.router.navigate(['detail-product']);
+    console.log('title: ', title)
+    if(title !== "COLLECTIONS" && title !== "CLOTHING" && title !== "ACCESSORIES") {
+      this.router.navigate(['detail-product']);
+    }
   }
 
+  showNavBar(show: boolean) {
+    this._showNavBar = show;
+  }
 }

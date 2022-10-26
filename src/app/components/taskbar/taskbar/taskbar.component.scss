@@ -1,0 +1,24 @@
+.mr_40 {
+    margin-right: 40px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+
+    .navbar-center {
+        display: flex;
+        
+        .title-navbar-center:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            color: grey;
+        }
+    }
+
+    .navbar-right {
+        display: flex;
+    }
+}
