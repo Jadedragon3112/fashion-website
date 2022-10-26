@@ -1,18 +1,5 @@
 <div class="wrapper">
-<app-taskbar (showMenu)="showNavBar($event)"></app-taskbar>   
-    <div class="show-navbar" [style.display]="_showNavBar ? 'block' : 'none'">
-        <div class="title-nav-bar">
-            <div>
-                <div class="title" *ngFor="let itemCollection of itemCollections" (click)="viewDetail(itemCollection)">{{itemCollection}}</div>
-            </div>
-            <div>
-                <div class="title" *ngFor="let itemClothing of itemClothings" (click)="viewDetail(itemClothing)">{{itemClothing}}</div>
-            </div>
-            <div>
-                <div class="title" *ngFor="let itemAccessorie of itemAccessories" (click)="viewDetail(itemAccessorie)">{{itemAccessorie}}</div>
-            </div>
-        </div>
-    </div>
+<app-taskbar></app-taskbar>  
     <div class="content">
         <div>
             <img class="brand-name" src="assets/icon/logo.svg">

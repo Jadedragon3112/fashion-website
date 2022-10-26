@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './home_page/home-page/home-page.component';
 import { DetailProductsComponent } from './components/detail-products/detail-products.component';
 import { TaskbarComponent } from './components/taskbar/taskbar/taskbar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { TaskbarComponent } from './components/taskbar/taskbar/taskbar.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
