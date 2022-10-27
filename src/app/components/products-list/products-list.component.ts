@@ -36,13 +36,24 @@ export class ProductList implements OnInit {
     this.clothingCategory = tilte;
   }
 
-  @HostListener("window:scroll", ["$event"])
-  onWindowScroll() {
-    let pos = (document.documentElement.scrollTop || document.body.scrollTop) + document.documentElement.offsetHeight;
+  // @HostListener("window:scroll", ["$event"])
+  // onWindowScroll() {
+  //   let pos = (document.documentElement.scrollTop || document.body.scrollTop) + document.documentElement.offsetHeight;
+  //   let max = document.documentElement.scrollHeight;
+  //   // pos/max will give you the distance between scroll bottom and and bottom of screen in percentage.
+  //   if(pos == max ) {
+  //     console.log('scroll')
+  //     this.getListPokemon();
+  //   }
+  // }
+
+  // @HostListener('scroll', ['$event']) // for scroll events of the current element
+  @HostListener('window:scroll', ['$event']) // for window scroll events
+  onScroll(event: any) {
+    let pos = Math.ceil(document.documentElement.scrollTop || document.body.scrollTop) + document.documentElement.offsetHeight;
     let max = document.documentElement.scrollHeight;
     // pos/max will give you the distance between scroll bottom and and bottom of screen in percentage.
-    if(pos == max ) {
-      console.log('scroll')
+    if(pos == max )   {
       this.getListPokemon();
     }
   }

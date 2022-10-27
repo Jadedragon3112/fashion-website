@@ -1,5 +1,5 @@
 <app-taskbar (passNameTitle)="getNameTitle($event)"></app-taskbar>
-<div class="wrapper">
+<div class="wrapper" (scroll)="onScroll($event)">
     <div class="content">FABLE OF {{clothingCategory}}</div>
     <div class="sort-by">
         <div class="content-left">Jackets KLS</div>
