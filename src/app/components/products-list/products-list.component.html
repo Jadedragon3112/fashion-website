@@ -1,0 +1,26 @@
+<app-taskbar (passNameTitle)="getNameTitle($event)"></app-taskbar>
+<div class="wrapper">
+    <div class="content">FABLE OF {{clothingCategory}}</div>
+    <div class="sort-by">
+        <div class="content-left">Jackets KLS</div>
+        <div class="content-right">
+            <div>Sort by</div>
+            <select id="select-sort">
+                <ng-container *ngFor="let sort of nameSort">
+                    <option value="{{sort}}">{{sort}}</option>
+                </ng-container>
+              </select>
+        </div>
+    </div>
+    <div class="images">
+        <ng-container *ngFor="let image of images">
+            <div class="column">
+                <img src="{{image}}">
+            </div>
+            <div class="detail-pokemon">
+
+            </div>
+        </ng-container>
+    </div>
+    <div class="detail"></div>
+</div>

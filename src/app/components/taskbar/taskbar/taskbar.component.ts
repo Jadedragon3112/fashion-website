@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./taskbar.component.scss']
 })
 export class TaskbarComponent implements OnInit {
-  @Output() showMenu = new EventEmitter();
+  @Output() passNameTitle = new EventEmitter();
   itemCollections = ['COLLECTIONS', 'KLASSIK', 'COLLABORATIONS', 'DESIGN CLOTHING', 'NEAVEN', 'SUPERSPORT'];
   itemClothings = ['CLOTHING', 'VIEW ALL', 'JACKETS', 'JEANS', 'OUTERWEAR', 'SHIRTING', 'SHORTS', 'SWEATSHIRT', 'TROUSERS', 'T-SHIRTS', 'SHIRTS', 'WAISTCOAT'];
   itemAccessories = ['ACCESSORIES', 'BAGS', 'BEANIES', 'HATS', 'SOCKS'];
@@ -20,10 +20,11 @@ export class TaskbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  viewDetail(title: string) {
-    console.log('title: ', title)
+  viewListProducts(title: string) {
     if(title !== "COLLECTIONS" && title !== "CLOTHING" && title !== "ACCESSORIES") {
-      this.router.navigate(['detail-product']);
+      this.passNameTitle.emit(title);
+      this.router.navigate(['list-products']);
+      this._showMenu = false;
     }
   }
 

@@ -15,15 +15,15 @@
 <div class="show-navbar" [style.display]="_showMenu ? 'block' : 'none'">
     <div class="title-nav-bar">
         <div>
-            <div class="title" *ngFor="let itemCollection of itemCollections" (click)="viewDetail(itemCollection)">
+            <div class="title" *ngFor="let itemCollection of itemCollections" (click)="viewListProducts(itemCollection)">
                 {{itemCollection}}</div>
         </div>
         <div>
-            <div class="title" *ngFor="let itemClothing of itemClothings" (click)="viewDetail(itemClothing)">
+            <div class="title" *ngFor="let itemClothing of itemClothings" (click)="viewListProducts(itemClothing)">
                 {{itemClothing}}</div>
         </div>
         <div>
-            <div class="title" *ngFor="let itemAccessorie of itemAccessories" (click)="viewDetail(itemAccessorie)">
+            <div class="title" *ngFor="let itemAccessorie of itemAccessories" (click)="viewListProducts(itemAccessorie)">
                 {{itemAccessorie}}</div>
         </div>
     </div>
