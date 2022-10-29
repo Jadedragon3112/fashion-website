@@ -11,13 +11,15 @@ import { ProductList } from './components/products-list/products-list.component'
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
+import { DetailPokemonComponent } from './components/detail-pokemon/detail-pokemon/detail-pokemon.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     ProductList,
-    TaskbarComponent
+    TaskbarComponent,
+    DetailPokemonComponent
   ],
   imports: [
     BrowserModule,

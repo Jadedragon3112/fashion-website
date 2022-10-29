@@ -1,6 +1,9 @@
 <div class="header flex">
+    <div class="icon-back" (click)="back()">
+        <mat-icon>arrow_back_ios</mat-icon>
+    </div>
     <div class="logo">
-        <img src="assets/icon/logo.svg">
+        <img src="assets/icon/logo.svg" (click)="goHomePage()">
     </div>
     <div class="navbar-center flex">
         <div class="pr_20 fw_600 title-navbar-center mr_40" (click)="clickShowMenuBar()">COLLECTIONS</div>

@@ -1,4 +1,4 @@
-<app-taskbar (passNameTitle)="getNameTitle($event)"></app-taskbar>
+<app-taskbar></app-taskbar>
 <div class="wrapper" (scroll)="onScroll($event)">
     <div class="content">FABLE OF {{clothingCategory}}</div>
     <div class="sort-by">
@@ -13,14 +13,14 @@
         </div>
     </div>
     <div class="images">
-        <ng-container *ngFor="let image of images">
-            <div class="column">
-                <img src="{{image}}">
+        <ng-container *ngFor="let image of details">
+            <div class="column" (click)="vieDetail(image.location_area_encounters)">
+                <img src="{{image.sprites.other.dream_world.front_default}}">
             </div>
+        </ng-container>
             <div class="detail-pokemon">
 
             </div>
-        </ng-container>
     </div>
     <div class="detail"></div>
 </div>
